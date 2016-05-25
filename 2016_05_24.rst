@@ -1,0 +1,22 @@
+==========
+2016-05-24
+==========
+
+Day 2
+
+WIFI debugging
+==============
+
+I had some WIFI issues.
+The connection would just randomly drop.
+
+Played with `iwlwifi` driver.
+Tried to disable some features to get it working.
+
+Chromium repo
+=============
+
+I got my hands on chromium git repository.
+Tried to compile and run the sample QUIC server and client which are inside
+chromium repository.
+My first attempts were unsuccessful.
