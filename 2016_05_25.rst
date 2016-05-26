@@ -1,0 +1,31 @@
+==================
+2016-05-25 - Day 3
+==================
+
+.. contents:: :local:
+
+Events
+======
+
+I attended the neural networks workshop.
+
+WIFI Troubles
+=============
+
+I still had issues with WIFI.
+Installed `wicd` on my Debian.
+For now it seems to work :)
+
+Chromium code base
+==================
+
+Almost for a whole day I worked on compiling QUIC demo server which was inside
+Chromium repo.
+Unfortunately I couldn't get it working.
+
+Later accidentially I found Jim Roskind's tweet about Google open sourcing
+stand alone QUIC library https://github.com/google/proto-quic.
+Basically it's the same as https://github.com/devsisters/libquic but it
+has demo server and client included.
+
+Eventually I ended up compiling the demo server at the end of the day.
