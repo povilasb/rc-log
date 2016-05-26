@@ -1,8 +1,14 @@
-==========
-2016-05-24
-==========
+==================
+2016-05-24 - Day 2
+==================
 
-Day 2
+.. contents:: :local:
+
+Events
+======
+
+I attended the HTTP workshop.
+
 
 WIFI debugging
 ==============
