@@ -1,0 +1,26 @@
+==================
+2016-05-26 - Day 4
+==================
+
+.. contents:: :local:
+
+QUIC Demo Server
+================
+
+First hall of the day I was trying to run the server.
+The main problem was generating proper certificates.
+Eventually, I've found a script in chromium repo that does that for you
+(`net/tools/quic/certs/generate-certs.sh`).
+
+When I had the certificates, I was able to run the QUIC server.
+But I faced another problem: the demo QUIC client just would not validate
+the self signed certificate.
+Chromium has some info on how to trust the self signed certificates:
+https://chromium.googlesource.com/chromium/src/+/master/docs/linux_cert_management.md
+But this did not work for me.
+
+So eventually I ended up patching the client code which validates the certificate.
+That was a one liner patch, which just ignored the checks :)
+So this hack let me got further.
+
+Finally, I started building a Docker image for the server...
