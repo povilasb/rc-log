@@ -1,0 +1,23 @@
+==================
+2016-05-27 - Day 5
+==================
+
+.. contents:: :local:
+
+QUIC Demo Server
+================
+
+Finally I finished building the Docker image for demo QUIC server
+https://github.com/povilasb/docker-demo-quic-server.
+
+And posted the results on Google groups
+https://groups.google.com/a/chromium.org/forum/#!searchin/proto-quic/docker/proto-quic/Nqyx8r-W_bs/NE3-Q8EaAQAJ
+
+QUIC Version Detector
+=====================
+
+During the second part of the day I was working on a tool that detects
+which QUIC protocol versions are supported by a given server.
+
+At the end of the day I had a working rough prototype.
+It's implemented in python3.
