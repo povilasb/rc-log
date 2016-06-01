@@ -1,0 +1,77 @@
+==================
+2016-05-31 - Day 9
+==================
+
+.. contents:: :local:
+
+Bluetooth issues
+================
+
+For some reasons my Bluetooth device just stopped working today.
+At first I thought it was a software problem.
+
+I checked if Bluetooth software stack was loaded::
+
+    ➜  ~ dmesg | grep Blue
+    [   33.465517] Bluetooth: Core ver 2.19
+    [   33.465544] Bluetooth: HCI device and connection manager initialized
+    [   33.465551] Bluetooth: HCI socket layer initialized
+    [   33.465554] Bluetooth: L2CAP socket layer initialized
+    [   33.465565] Bluetooth: SCO socket layer initialized
+    [   33.475025] Bluetooth: BNEP (Ethernet Emulation) ver 1.3
+    [   33.475030] Bluetooth: BNEP filters: protocol multicast
+    [   33.475040] Bluetooth: BNEP socket layer initialized
+
+Then I checked if the device is not blocked::
+
+    ➜  ~ rfkill list all
+    0: phy0: Wireless LAN
+            Soft blocked: no
+            Hard blocked: no
+
+And the device was not listed in here. So I listed all PCI devices::
+
+    ➜  ~ lspci
+    00:00.0 Host bridge: Intel Corporation 2nd Generation Core Processor Family DRAM Controller (rev 09)
+    00:02.0 VGA compatible controller: Intel Corporation 2nd Generation Core Processor Family Integrated Graphics Controller (rev 09)
+    00:16.0 Communication controller: Intel Corporation 6 Series/C200 Series Chipset Family MEI Controller #1 (rev 04)
+    00:19.0 Ethernet controller: Intel Corporation 82579LM Gigabit Network Connection (rev 04)
+    00:1a.0 USB controller: Intel Corporation 6 Series/C200 Series Chipset Family USB Enhanced Host Controller #2 (rev 04)
+    00:1b.0 Audio device: Intel Corporation 6 Series/C200 Series Chipset Family High Definition Audio Controller (rev 04)
+    00:1c.0 PCI bridge: Intel Corporation 6 Series/C200 Series Chipset Family PCI Express Root Port 1 (rev b4)
+    00:1c.1 PCI bridge: Intel Corporation 6 Series/C200 Series Chipset Family PCI Express Root Port 2 (rev b4)
+    00:1c.3 PCI bridge: Intel Corporation 6 Series/C200 Series Chipset Family PCI Express Root Port 4 (rev b4)
+    00:1c.4 PCI bridge: Intel Corporation 6 Series/C200 Series Chipset Family PCI Express Root Port 5 (rev b4)
+    00:1d.0 USB controller: Intel Corporation 6 Series/C200 Series Chipset Family USB Enhanced Host Controller #1 (rev 04)
+    00:1f.0 ISA bridge: Intel Corporation QM67 Express Chipset Family LPC Controller (rev 04)
+    00:1f.2 SATA controller: Intel Corporation 6 Series/C200 Series Chipset Family 6 port SATA AHCI Controller (rev 04)
+    00:1f.3 SMBus: Intel Corporation 6 Series/C200 Series Chipset Family SMBus Controller (rev 04)
+    03:00.0 Network controller: Intel Corporation Centrino Wireless-N 1000 [Condor Peak]
+    0d:00.0 System peripheral: Ricoh Co Ltd PCIe SDXC/MMC Host Controller (rev 07)
+
+I couldn't find the Bluetooth listed in here either.
+So I presumed this is a hardware issue.
+
+QUIC Version Detector
+=====================
+
+I finished the QUIC version detection tool to print a nicer output.
+You can see the demo at https://github.com/povilasb/quic-version-detector.
+
+Published the packed on PyPI https://pypi.python.org/pypi/quic-version-detector/0.1.1.
+
+Tools
+=====
+
+I've got familiar with https://github.com/icholy/ttygif: a really easy utility
+to record your terminal into a gif file.
+
+Events
+======
+
+At the end of the day I went to NYC Linux User Group meetup.
+They held an open hacker hours event.
+It was a workshop like event. You could work on anything you wanted.
+I was planning to work on VPN over DNS.
+Unfortunately, there was no available internet connection.
+So I didn't stay there long...
