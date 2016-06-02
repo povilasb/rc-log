@@ -1,0 +1,27 @@
+===================
+2016-06-01 - Day 10
+===================
+
+.. contents:: :local:
+
+QUIC Research
+=============
+
+At the start of my work day I reviewed Wireshark QUIC dissector code
+(http://code.metager.de/source/xref/wireshark/epan/dissectors/packet-quic.c).
+My main goal was to make a regular HTTP GET request.
+But this Wireshark dissector only parsed the public header.
+So I did not find anything interesting in there.
+
+Later I started doing some research on the QUIC crypto protocol.
+I read the handshake part of the QUIC crypto protocol.
+Investigated the communication between demo server and client using
+Wireshark.
+
+Events
+======
+
+Attended the "Public key encryption/SSL seminar".
+Most of the information I already knew.
+Although I put together some missing pieces of the puzzle related to
+certificate authorities.
