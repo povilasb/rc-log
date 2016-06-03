@@ -1,0 +1,89 @@
+===================
+2016-06-02 - Day 11
+===================
+
+.. contents:: :local:
+
+Bluetooth
+=========
+
+It suddenly started working this morning :) ::
+
+    ➜  ~ rfkill list
+    0: tpacpi_bluetooth_sw: Bluetooth
+            Soft blocked: no
+            Hard blocked: no
+    1: phy0: Wireless LAN
+            Soft blocked: no
+            Hard blocked: no
+    8: hci0: Bluetooth
+            Soft blocked: no
+            Hard blocked: no
+
+QUIC Research
+=============
+
+My goal was to make a QUIC handshake.
+I couldn't figure out how to do that from crypto spec.
+It' has no clear specification how to lay the bytes inside a handshake packet.
+So I thought I would dig into some existant open source projects.
+
+I started playing with https://github.com/lucas-clemente/quic-go.
+It's a pure golang QUIC server implementation.
+Eventually, I got it working.
+But unfortunately the server only supported QUIC 33 version.
+So I decided to investigate the official Google demo QUIC client.
+
+This client is implemented in c++.
+I could easily rebuild the client, do some information printing to stdout, etc.
+After doing some grep'ing I easily found the function which constructs the
+package.
+It's called `ConstructHandhsakeMessage <https://github.com/google/proto-quic/blob/7a0993ad8683d812537dec6a1dca3eba2b5e7371/src/net/quic/crypto/crypto_framer.cc#L85>`_.
+
+Tools
+=====
+
+Today I was mostly working with
+`tshark <https://www.wireshark.org/docs/man-pages/tshark.html>`_.
+It's a CLI network traffic analyzer. Just like `tcpdump`, but it's able
+to parse packets just as `Wireshark` is.
+
+E.g. to capture and parse QUIC packets going through docker network one would
+write::
+
+    $ tshark -i docker0 -O quic -x
+
+The result would look like this::
+
+    Frame 2: 91 bytes on wire (728 bits), 91 bytes captured (728 bits) on interface 0
+    Ethernet II, Src: 02:42:ac:11:00:02 (02:42:ac:11:00:02), Dst: 02:42:9f:31:74:48 (02:42:9f:31:74:48)
+    Internet Protocol Version 4, Src: 172.17.0.2 (172.17.0.2), Dst: 172.17.0.1 (172.17.0.1)
+    User Datagram Protocol, Src Port: 80 (80), Dst Port: 5467 (5467)
+    QUIC (Quick UDP Internet Connections)
+        Public Flags: 0x0d
+            .... ...1 = Version: Yes
+            .... ..0. = Reset: No
+            .... 11.. = CID Length: 8 Bytes (0x03)
+            ..00 .... = Sequence Length: 1 Byte (0x00)
+            00.. .... = Reserved: 0x00
+        CID: 578437695752307201
+        Version: Q034
+        Sequence: 81
+        Payload: 303333513033325130333151303330513032395130323851...
+
+    0000  02 42 9f 31 74 48 02 42 ac 11 00 02 08 00 45 00   .B.1tH.B......E.
+    0010  00 4d aa 85 40 00 40 11 37 f5 ac 11 00 02 ac 11   .M..@.@.7.......
+    0020  00 01 00 50 15 5b 00 39 58 70 0d 01 02 03 04 05   ...P.[.9Xp......
+    0030  06 07 08 51 30 33 34 51 30 33 33 51 30 33 32 51   ...Q034Q033Q032Q
+    0040  30 33 31 51 30 33 30 51 30 32 39 51 30 32 38 51   031Q030Q029Q028Q
+    0050  30 32 37 51 30 32 36 51 30 32 35                  027Q026Q025
+
+Events
+======
+
+Today I attended the seminar about Tor.
+Frank Wang presented how actually Tor works.
+He overviewed the exit nodes, directory service, hidden services, rendezvous
+points etc.
+Most of the information was new for me.
+So the seminar turned out to be really informative :)
