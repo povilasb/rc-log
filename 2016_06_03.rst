@@ -1,0 +1,23 @@
+===================
+2016-06-03 - Day 12
+===================
+
+.. contents:: :local:
+
+QUIC Research
+=============
+
+Today I tried to understand the first client packet with `CHLO` (Client Hello)
+tag. There was one undocumented 16 byte field that I could not understand.
+This field was just after the public packet and before the `CHLO` tag.
+The value of this field was different for every request.
+
+I dug into `proto-quic` sources to find the answer.
+It took me almost a day.
+And unfortunately I did not find the answer.
+At the end of the day I posted a question on Google Groups
+https://groups.google.com/a/chromium.org/forum/#!topic/proto-quic/2T8QB6p3kIg.
+
+Turns out that this field is a packet hash.
+And the hash function is `FNV1a
+<https://en.wikipedia.org/wiki/Talk:Fowler%E2%80%93Noll%E2%80%93Vo_hash_function>`_.
