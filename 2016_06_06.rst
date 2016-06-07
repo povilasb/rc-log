@@ -1,0 +1,49 @@
+===================
+2016-06-06 - Day 15
+===================
+
+.. contents:: :local:
+
+QUIC Research
+=============
+
+Today I extracted the FNV-1A hash utilities from
+https://github.com/google/proto-quic to a separate repository.
+Now it's a small c++ library that only does the FNV-1A hashing
+https://github.com/povilasb/cpp-fnv.
+
+I intend on writing a pure Python implementation though.
+But this c++ library will help me to validate the future python code.
+
+Events
+======
+
+Vim Workshop
+------------
+
+I attended the vim workshop which targeted the beginners.
+So I knew most of the information.
+But still it was good to recap some movements.
+
+Coding Dojo
+-----------
+
+Later on I worked on a problem during the coding dojo event
+(https://www.hackerrank.com/challenges/bear-and-steady-gene).
+
+I paired up with Sean. We used python to solve the problem.
+Unfortunately we did not come up with a solution.
+We were short in time. We had 40 minutes or so.
+I guess we wasted too much time on focusing on the TDD part of the process
+rather than digging into the problem itself.
+
+Anyways, I'm planning to solve this problem later on myself.
+
+"How do you know that it works? Running your programs, big and small"
+---------------------------------------------------------------------
+
+In the evening one of the RC residents, Andreas Fuchs, gave us a talk
+how to deal with software in production.
+He covered the deployment, testing, debugging topics, etc.
+Basically he was talking how to maintain your systems so that no one should
+be woken up at night :D
