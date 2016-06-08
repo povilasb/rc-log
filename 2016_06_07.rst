@@ -1,0 +1,31 @@
+===================
+2016-06-07 - Day 16
+===================
+
+.. contents:: :local:
+
+QUIC Research
+=============
+
+I tried to validate if the extracted
+`fnv hashing utilities <https://github.com/povilasb/cpp-fnv>`_ work as they
+are expected.
+Before I could do that I had to figure out which data is passed to the hashing
+function.
+Turns out that there are two blobs of data: the public header and the packet
+payload.
+Using `quic-proto` sample `quic_client` I saved locally the public header,
+CHLO packet payload and the computed hash.
+Then I used this data to validate if `cpp-fnv` utilities calculate
+a proper hash for the given values.
+Successfully it did it right :)
+
+
+Events
+======
+
+I attended the Flask workshop for the beginners.
+It's a lightweight python based Web development framework.
+I've used Flask before for the basic needs.
+So I knew most of the presented information: basic Flask samples, Jinja
+template use, etc.
