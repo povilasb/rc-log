@@ -1,0 +1,31 @@
+===================
+2016-06-08 - Day 17
+===================
+
+.. contents:: :local:
+
+Python FNV hash library
+=======================
+
+I implemented FNV hashing function in pure python.
+Actually that was only a couple of lines.
+But I spent some time researching how python numbers work and if I can get
+128 bit number arithmetic.
+I read `PEP 237 <https://www.python.org/dev/peps/pep-0237/>`_ which
+describes how python numbers are implemented.
+Turns out that python allows arbitraty size integer numbers.
+That's cool, I don't need any third party libraries :)
+
+FNV algorithm requires fixed 128 bit length integer numbers.
+So I spent some time researching if there's some library for that.
+
+I tried `gmpy2 <https://gmpy2.readthedocs.io/en/latest/>`_.
+It's a python wrapper for GMP library.
+So it needs to be compiled and depends on some debian package.
+
+Fortunately, the fixed length was achieved by doing some modular arithmetic.
+After each calculation I would calculate the modulus of `(1 << 128) - 1`.
+
+.. code-block:: python
+
+    has_value = (init_hash_value * prime_128) & ((1 << 128) - 1)
