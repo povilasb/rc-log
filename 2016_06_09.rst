@@ -1,0 +1,33 @@
+===================
+2016-06-09 - Day 18
+===================
+
+.. contents:: :local:
+
+Most of my time during today I invested in learning new tools and improving
+my processes.
+
+Tools
+=====
+
+Python Testing
+--------------
+
+The day before I started implementing Python FNV hashing library.
+Today I invested some time in writing tests.
+Couple of days before I found this extension for `pytest` that allows
+you to write RSpec like tests in python https://github.com/ropez/pytest-describe.
+So I tried this library myself.
+
+Neovim Abbreviations
+--------------------
+
+I have been wanting to make vim abbrevations for a long time.
+Finally I invested some time in making them :)
+
+I made a couple of python abbreviations:
+
+.. image:: vim_abbreviations.gif
+
+
+Although this might be redundant when I'll get python completion working :)
