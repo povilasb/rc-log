@@ -1,0 +1,17 @@
+===================
+2016-06-13 - Day 22
+===================
+
+.. contents:: :local:
+
+Python FNV hash library
+=======================
+
+Today I worked a bit more on the FNV hash functions
+(https://pypi.python.org/pypi/fnv).
+I wanted to publish it as a separate library.
+So I made it a little more flexible.
+One can specify hash size in bits and which algorithm to use: either FNV or
+FNV-1A.
+
+Finally I published it on pypi https://pypi.python.org/pypi/fnv.
