@@ -1,0 +1,18 @@
+===================
+2016-06-14 - Day 23
+===================
+
+.. contents:: :local:
+
+HackerRank challenge
+====================
+
+Last week I participated in a coding dojo. We worked on a HackerRank challenge
+https://www.hackerrank.com/challenges/bear-and-steady-gene.
+Unfortunately, I could not make my it work then.
+The problem didn't seem too hard and it bugged me.
+So I decided to solve it.
+
+I reimplemented it in python again.
+Naive implementation only passed 2 test cases and the rest of them timedout.
+Therefore I will have to profile and optimize my solution.
