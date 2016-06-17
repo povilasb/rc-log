@@ -1,0 +1,24 @@
+===================
+2016-06-16 - Day 25
+===================
+
+.. contents:: :local:
+
+Binding C++ With Python
+=======================
+
+Today I was helping out Anna Kedzierska with some C++.
+She was struggling with building the C++ bindings for Python.
+
+I was planning to play around with the same problem some time.
+So there I had an opportunity to do that while helping someone :)
+
+Initially Anna tried to use Boost Python binding library.
+But I remembed a better alternative to it called
+`pybind11 <https://github.com/pybind/pybind11>`_.
+It's a header only C++11 compatible library.
+So I played around with the library and ended up with very simple example
+https://github.com/povilasb/pybind-samples.
+
+Anna was using Mac OS X. So we needed to adjust some slight details.
+But eventually the samples worked for her too :)
