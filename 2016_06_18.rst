@@ -1,0 +1,24 @@
+===================
+2016-06-18 - Day 27
+===================
+
+.. contents:: :local:
+
+Intro To Machine Learning
+=========================
+
+While studying in Recurse Center I'm seeing a lot of people doing very
+fun stuff with Machine Learning.
+So I told myself I'm going to allocate some time for ML.
+I thought of doing this on the weekends so that it would not interfere
+with my main work: QUIC protocol research.
+
+Today I simply played with http://scikit-learn.org/.
+I did some exercises from
+`Google Machine Learning Recipes series <https://www.youtube.com/playlist?list=PLOU2XLYxmsIIuiBfYad6rFYQU_jL2ryal>`_.
+
+That was fun and easy using the framework.
+I only needed less than 10 lines of code to get my basic examples working and
+to start predicting and classifying data :)
+
+But I can see that some things can get complicated pretty fast.

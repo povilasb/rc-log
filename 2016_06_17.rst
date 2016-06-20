@@ -1,0 +1,16 @@
+===================
+2016-06-17 - Day 26
+===================
+
+.. contents:: :local:
+
+HackerRank challenge
+====================
+
+I continued working on the
+`same HackerRank challenge <https://www.hackerrank.com/challenges/bear-and-steady-gene>`_.
+
+I found some bugs that affected the failing test cases.
+I got those fixed, but still had other failing cases.
+
+I wrote more tests, refactored code for readability.
