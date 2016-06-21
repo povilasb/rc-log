@@ -1,0 +1,40 @@
+===================
+2016-06-20 - Day 29
+===================
+
+.. contents:: :local:
+
+HackerRank Challenge
+====================
+
+Today I finally fixed the bugs, got the naive implementation working.
+Although it timed out most of the test cases.
+
+Eventually, I implemented the "Rubber Banding" algorithm by Charley Lewittes.
+I got one more test case to pass, but the rest still timed out.
+
+Events
+======
+
+Unix & Linux Debugging Tools
+----------------------------
+
+Pris Nasrat presented some of useful Linux tools:
+
+* strace
+* lsof
+* gdb
+* /proc filesystem
+* etc
+
+All of the tools I knew before.
+But some of the options of lsof, strace, etc. were new for me :)
+
+Linux Kernel Seminar
+--------------------
+
+I really enjoyed this talk.
+
+Sarah Sharp introduced us to the Linux kernel development process.
+She overviewed the compilation, source code tree, demonstrated how
+one of the usb devices sources looks like, etc.
