@@ -1,0 +1,113 @@
+===================
+2016-06-21 - Day 30
+===================
+
+.. contents:: :local:
+
+HackerRank Challenge
+====================
+
+Finally, I got my all test cases to pass.
+The implementation is in here: https://github.com/povilasb/steady-genes
+
+Firs of all I profiled the existing implementation.
+Although the algorithm was supposed to be O(N) complex, it turned out
+to be slow as hell: one test case was running for 1.5 hours!
+
+Anyways, I used the `line profiler <https://github.com/rkern/line_profiler>`_.
+It gives you quite a nice output::
+
+    povilas@povilas ~/projects/steady-genes (308e736...) $ cat data.txt | kernprof -l -v src/main.py
+    73
+    Wrote profile results to main.py.lprof
+    Timer unit: 1e-06 s
+
+    Total time: 0.452784 s
+    File: src/main.py
+    Function: min_substring at line 50
+
+    Line #      Hits         Time  Per Hit   % Time  Line Contents
+    ==============================================================
+        50                                           @profile
+        51                                           def min_substring(text):
+        52         1            2      2.0      0.0      min_substring = text
+        53         1         1017   1017.0      0.2      replace_me = excessive_genes(text)
+        54
+        55         1            8      8.0      0.0      if len(replace_me) == 0:
+        56                                                   return ''
+        57
+        58         1            1      1.0      0.0      pos = 0
+        59         1            2      2.0      0.0      substr = text[0]
+        60      2509         1543      0.6      0.3      while pos + 1 < len(text):
+        61      2508       221906     88.5     49.0          substr, pos = expand_substring(substr, text, pos, replace_me)
+        62      2508       226006     90.1     49.9          substr, last_removed = reduce_substring(substr, replace_me)
+        63
+        64      2508         2292      0.9      0.5          if len(substr) + 1 < len(min_substring):
+        65         8            6      0.8      0.0              min_substring = last_removed + substr
+        66
+        67         1            1      1.0      0.0      return min_substring
+
+Then it's pretty easy to pin-point which paths consume the most time.
+In this case it's (**expand_substring** and **reduce_substring**).
+
+Eventually, I found out that it's the `stabilizes_gene` predicate function
+that gives you the most overhead::
+
+    povilas@povilas ~/projects/steady-genes (308e736...) $ cat data.txt | kernprof -l -v src/main.py
+    Wrote profile results to main.py.lprof
+    Timer unit: 1e-06 s
+
+    Total time: 0.119985 s
+    File: src/main.py
+    Function: stabilizes_gene at line 21
+
+    Line #      Hits         Time  Per Hit   % Time  Line Contents
+    ==============================================================
+        21                                           @profile
+        22                                           def stabilizes_gene(char_frequencies, replace_me):
+        23     24874        20484      0.8     17.1      if len(char_frequencies) < len(replace_me):
+        24         4            1      0.2      0.0          return False
+        25
+        26     72106        40550      0.6     33.8      for symbol, freq in replace_me.items():
+        27     59738        48662      0.8     40.6          if symbol not in char_frequencies or freq > char_frequencies[symbol]:
+        28     12502         6138      0.5      5.1              return False
+        29
+        30     12368         4150      0.3      3.5      return True
+
+This function compares two dictionaries (letter frequencies) and tells
+if the first dictionary stabilizes the second one.
+There was a lot of extra dictionary construction while iterating the given
+text (gene), then we would iterate over those new dictionaries.
+And all this work consumed >90% of CPU time.
+So I had to get rid of them.
+
+Eventually, I ended up with an implementation where I would not construct
+temporary letter counters for a given substring.
+I would have a single dictionary to count which of the letters I have too much.
+And then while iterating the given text I would just update this dictionary.
+
+And now the same test case that ran for 1.5 hours finished in 0.5 seconds :)
+
+C++ To Python Bindings
+======================
+
+Most of the day I worked with Anna helping her out with C++ builds and
+pybind11.
+Eventually, we got one of her main functions working in Python.
+But there still some weird things regarding C++ objects linking that I
+could not understand.
+
+Events
+======
+
+SMT solvers/automated theorem provers
+-------------------------------------
+
+I attended this Satisfiability Modulo Theories seminar by Jamey Sharp.
+Event at the end of the talk I still didn't really get the SMTs.
+But Jamey presented where it can be applied.
+E.g. some systems use it to generate test cases for a given code - which
+sounds pretty cool. Because it's all automated :)
+
+Some people solve sudokus using it.
+Some systems use it to check functions if they conform to their contract, etc.
