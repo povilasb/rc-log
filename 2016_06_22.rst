@@ -1,0 +1,24 @@
+===================
+2016-06-22 - Day 31
+===================
+
+.. contents:: :local:
+
+HackerRank Challenge
+====================
+
+When I finished with my own implementation, I still spent some time looking
+at `Charley's implementation in Scala <https://github.com/ctlewitt/Scala-Practice/blob/master/src/BearAndSteadyGene.scala>`_.
+It was short and neat.
+So I decided to refactor mine too.
+
+After I investigated Charley's code it was clear why this implementation
+was way shorted. It used recursion.
+So I decided to do that myself.
+Turns out that python limits recursion depth. And I hit the limit
+with the larger test cases.
+Unfortunately python does not have a tail recursion optimization.
+So I just dropped the idea of implementing the algorithm in python the
+same way Charley did.
+
+At the end of the day I just played with other hacker rank python problems.
