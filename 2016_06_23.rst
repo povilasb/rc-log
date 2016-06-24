@@ -1,0 +1,21 @@
+===================
+2016-06-23 - Day 32
+===================
+
+.. contents:: :local:
+
+QUIC Version Detector
+=====================
+
+Today I worked on refactor QUIC version detector tool.
+I was trying to make UDP requests asynchronously with python `asyncio`.
+`asyncio` was not as intuitive as I expected.
+I'm comming from a backround where I used to work with `libevent`.
+`asyncio` uses python facilities like futures, tasks, coroutines, etc.
+that I'm not familiar with yet.
+So in order to understand how `asyncio` actually works, I should
+get myself comfortable with the basics of those features.
+
+Anyways, eventually I managed to make a working prototype.
+But it still requires some polishing, implementing timeouts, request bursts,
+tests, etc.
