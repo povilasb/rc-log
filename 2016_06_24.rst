@@ -1,0 +1,21 @@
+===================
+2016-06-24 - Day 33
+===================
+
+.. contents:: :local:
+
+Python Coroutines
+=================
+
+Today I was playing around with Python coroutines and generators.
+I ended up build a collection pipeline library.
+E.g. I could do something like this in python syntax
+
+.. code-block:: python
+
+    cat('/tmp/file.txt') | filter('some line') | filter('some line 2') | out
+
+Just imagine how cool and easy it would be to prototype with something like
+this in my `xonsh`::
+
+    $ scrape('google.com/search?q=python') | css('#ires') | css('a["href"]') | filter('*.org') | sort() | out()
