@@ -1,0 +1,12 @@
+===================
+2016-06-27 - Day 36
+===================
+
+.. contents:: :local:
+
+Python Collection Pipeline
+==========================
+
+Today I continued working on python collection pipeline library.
+I refactored the code, added a couple of more pipeline processors.
+One of them was `http` processor.
