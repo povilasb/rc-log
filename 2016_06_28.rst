@@ -1,0 +1,34 @@
+===================
+2016-06-28 - Day 37
+===================
+
+.. contents:: :local:
+
+Python Collection Pipeline
+==========================
+
+Today I added json processor, some tests, updated
+`CollectionPipelineProcessor.process()` to be more testable.
+Now it accepts an item instead of getting one from `yield`.
+
+.. code-block:: python
+
+    def process(self, item):
+
+I had some troubles mocking one of my functions with `mock.patch()`.
+So I spent some time investigating that.
+But eventually I just made the function part of `http` processor class and
+mocked it in a usual way.
+
+.. code-block:: python
+
+    class http(CollectionPipelineProcessor):
+
+        def _get(self, url):
+            """
+            Returns:
+                str: response body.
+            """
+            return urllib.request.urlopen(url).read().decode('utf-8')
+
+Though it does not use the `self` reference.
