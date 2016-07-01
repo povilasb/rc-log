@@ -1,0 +1,10 @@
+===================
+2016-06-29 - Day 38
+===================
+
+.. contents:: :local:
+
+Python Collection Pipeline
+==========================
+
+Today I added tail(), head(), split(), echo() processors.

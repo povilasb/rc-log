@@ -1,0 +1,13 @@
+===================
+2016-06-30 - Day 39
+===================
+
+.. contents:: :local:
+
+Python Collection Pipeline
+==========================
+
+Today I added word(), freq(), bar(), line(), wordcloud() prorcessors.
+The last 3 ones are used to visualize data with matplotlib.
+
+Eventually I presented the library during the weekly presentations.
