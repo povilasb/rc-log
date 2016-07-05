@@ -1,0 +1,11 @@
+===================
+2016-07-01 - Day 40
+===================
+
+.. contents:: :local:
+
+Python Collection Pipeline
+==========================
+
+Today I documented the current library API, put some samples, videos, etc.
+https://github.com/povilasb/pycollection-pipelines
