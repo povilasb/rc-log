@@ -1,0 +1,16 @@
+===================
+2016-07-05 - Day 44
+===================
+
+.. contents:: :local:
+
+Python Collection Pipeline
+==========================
+
+Today I enabled Travis CI builds for collection pipelines project:
+https://travis-ci.org/povilasb/pycollection-pipelines.
+
+I fixed `words` processor to split text into words that are separated by
+punctuation marks.
+
+Also, I wrote some type annotations: https://docs.python.org/3/library/typing.html.
