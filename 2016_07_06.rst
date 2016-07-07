@@ -1,0 +1,14 @@
+===================
+2016-07-06 - Day 45
+===================
+
+.. contents:: :local:
+
+Python Collection Pipeline
+==========================
+
+Today I added the repository to https://www.quantifiedcode.com. It is supposed
+to check the code for common issues.
+
+Also, I tagged the initial **0.1.0** version and uploaded the package on
+`PyPI <https://pypi.python.org/pypi/collection-pipelines/0.1.0>`_.
