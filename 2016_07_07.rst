@@ -1,0 +1,28 @@
+===================
+2016-07-07 - Day 46
+===================
+
+.. contents:: :local:
+
+Python Collection Pipeline
+==========================
+
+Today I fixed some bugs reported by quantified code system.
+Tagged new version and reuploaded updates to PyPI.
+
+Graphics In Terminal
+====================
+
+Also, I reseached some visualization tools in a terminal:
+* https://github.com/asciimoo/drawille
+* https://github.com/gizak/termui
+* https://github.com/yaronn/blessed-contrib
+
+Currently charts are drawn using matplotlib. Which is a bit tedious to install.
+So having a pure terminal based charts would be easer for end users.
+
+Make An Image Silhouette Using GIMP
+===================================
+
+In addition, I learned to make an image silhoutte using gimp.
+Here's the tutorial: https://hollyspinner.wordpress.com/2010/01/20/shadowplay-tutorial/.

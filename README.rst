@@ -12,6 +12,7 @@ This log is mean to keep track of my progress during the studies.
 LOG
 ===
 
+* `2016-07-07 <https://github.com/povilasb/rc-log/blob/master/2016_07_07.rst>`_
 * `2016-07-06 <https://github.com/povilasb/rc-log/blob/master/2016_07_06.rst>`_
 * `2016-07-05 <https://github.com/povilasb/rc-log/blob/master/2016_07_05.rst>`_
 * `2016-07-01 <https://github.com/povilasb/rc-log/blob/master/2016_07_01.rst>`_
