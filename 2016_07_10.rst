@@ -1,0 +1,15 @@
+===================
+2016-07-10 - Day 49
+===================
+
+.. contents:: :local:
+
+Databases camp
+==============
+
+It's a free conference about databases (http://database.camp/).
+I enjoyed the talk about `ScyllaDB <http://www.scylladb.com/>`_ the most.
+
+It's a Cassandra compatible database but 10 times faster.
+It's written in C++ and has a lot of very interesting optimizations.
+These guys wrote their own user space TCP/IP stack, disk I/O scheduler, etc.
