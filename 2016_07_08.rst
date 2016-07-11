@@ -1,0 +1,12 @@
+===================
+2016-07-08 - Day 47
+===================
+
+.. contents:: :local:
+
+QUIC Research
+=============
+
+Today I revised where I stopped regarding QUIC research.
+Last time I worked on it I was still struggling with crypto handshake.
+I revised the crypto protocol and wire specification.
