@@ -1,0 +1,13 @@
+===================
+2016-07-11 - Day 50
+===================
+
+.. contents:: :local:
+
+QUIC Research
+=============
+
+Today I was investigating the **CHLO** message. It's the initial message
+that QUIC client sends to the server.
+
+I started writting python parser for this message.
