@@ -1,0 +1,11 @@
+===================
+2016-07-12 - Day 51
+===================
+
+.. contents:: :local:
+
+QUIC Research
+=============
+
+Today I continued on implementing **CHLO** message parsing. I almost got
+it working. Except I still need to refactor code a little.
