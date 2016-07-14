@@ -1,0 +1,49 @@
+===================
+2016-07-13 - Day 52
+===================
+
+.. contents:: :local:
+
+QUIC CHLO packet
+================
+
+Today I replaced loops with collection pipelines.
+I used https://github.com/EntilZha/PyFunctional library.
+
+Vagrant
+=======
+
+Also I helped Amulya to setup scikitlearn and Tesnsorflow vagrant image.
+
+Machine Learning Seminar
+========================
+
+Later I attended intro to machine learning seminar by Antony.
+He explained theory starting from the very basics: linear regression,
+what is weights, backpropagation.
+He introduced us with multiple linear regression, neural networks, deep neural
+networks, etc.
+
+Python Collection Pipelines
+===========================
+
+In the evening I implemented collection pipelines output processor **pysay**.
+It prints text items using this kind of format::
+
+      _______
+    < My text >
+      -------
+        \
+         \
+             .-----.
+            | O     |
+            +---.   |
+            ____|   |
+          +         . .--.
+         |   .-----+  |   |
+         |   | .-----+    |
+          +-+ /    ______.+
+              |   |
+              |   +---.
+              \     O |
+               +-----+
