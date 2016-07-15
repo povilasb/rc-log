@@ -1,0 +1,11 @@
+===================
+2016-07-14 - Day 53
+===================
+
+.. contents:: :local:
+
+Today I spent some time telling Antony and Amulya about git use and internals.
+
+I also helped Naomi to debug problems with her Bittorrent handhsake packet.
+
+I attended the seminar about deep neural networks.
