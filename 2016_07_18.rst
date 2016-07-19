@@ -1,0 +1,35 @@
+===================
+2016-07-18 - Day 57
+===================
+
+.. contents:: :local:
+
+Docker autostart
+================
+
+Recently I got tired of constantly starting my QUIC demo server docker
+container every time I restart computer.
+So I decided to look up how to autostart docker containers.
+
+Turns out it's really easy to do so.
+Docker has restart policy built-in
+https://docs.docker.com/engine/reference/run/#restart-policies-restart.
+
+All I had to do was to appen **--restart=always** flag to **docker run**
+command.
+
+PyQUIC
+======
+
+Today I refactored code a little bit and implemented packet hash extraction.
+
+Events
+======
+
+Today I attended two events.
+The first one was big data developers meetup. Developer from IBM presented
+how to do basketball game predictions using spark and some machine learning.
+
+The next one was at Ebay office. One of Recurse Center residents presented
+about web security: how cookies and other meta information sent by browser
+can expose your visited websites, etc.
