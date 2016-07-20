@@ -1,0 +1,21 @@
+===================
+2016-07-19 - Day 58
+===================
+
+.. contents:: :local:
+
+PyFNV
+=====
+
+Today I rolled out a new `PyFNV <https://github.com/povilasb/pyfnv>`_ version
+(0.2.0).
+The hashing function was updated to work with byte buffers rather than
+string ones.
+Also, annotated code with types.
+
+PyQUIC
+======
+
+Today I implemented a QUIC packet hash calculation.
+Then this calculated hash can be compared with the one in packet itself to
+check the packet integrity.
