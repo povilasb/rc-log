@@ -1,0 +1,17 @@
+===================
+2016-07-20 - Day 59
+===================
+
+.. contents:: local:
+
+PyQUIC
+======
+
+Today I almost finished implementing the stream frame header parsing.
+
+Misc
+====
+
+I also assisted Antony on writing more maintainable code.
+We refactored some Antony's code to a more decoupled, readable code
+that reflects more to problem domain.
