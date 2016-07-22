@@ -1,0 +1,34 @@
+===================
+2016-07-21 - Day 60
+===================
+
+.. contents:: local:
+
+PyQUIC
+======
+
+Today I finished implementing stream frame header parsing.
+
+Misc
+====
+
+Also I helped Amulya with networking problems on her freshly installed
+Ubuntu 16.04.
+
+Then Antony implemented https://en.wikipedia.org/wiki/Luhn_algorithm
+and he was interested how I would solve that.
+So I did it :)
+
+.. code-block:: python
+
+    def ensure_max_9(digit):
+        if digit > 9:
+            return digit - 9
+        return digit
+
+    def is_credit_card_number_valid(card_number):
+        digits = [int(d) for d in card_number[::2]]
+        doubled = [ensure_max_9(int(d) * 2) for d in card_number[1::2]]
+        return (sum(digits) + sum(doubled)) % 10 == 0
+
+    assert is_credit_card_number_valid('79927398713') == True
