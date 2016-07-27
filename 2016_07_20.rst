@@ -2,7 +2,7 @@
 2016-07-20 - Day 59
 ===================
 
-.. contents:: local:
+.. contents:: :local:
 
 PyQUIC
 ======
