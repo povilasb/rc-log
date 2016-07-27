@@ -1,0 +1,30 @@
+===================
+2016-07-26 - Day 65
+===================
+
+.. contents:: local:
+
+PyQUIC
+======
+
+I finished implementing CHLO message serialization.
+Then I built a prototype to build a whole QUIC CHLO packet which included
+public header, packet hash, stream frame header and CHLO message body.
+
+When trying to send the packet with nc (`cat chlo.raw | nc -u 172.17.0.2 80`)
+I would receive "No recent network activity" error response from the server.
+I started digging into `proto-quic` source code to find out what this error
+message really means.
+It turns out that it's the connection timeout error.
+But that was the first packet for that connection.
+So this made me no sense.
+Then investigating the sample packet sent by demo QUIC client I noticed it
+had `CTIM` (client timestamp) tag.
+I did not include this tag into my packet. So my first thought was that
+the lack of this tag might result in connection timeout.
+So I tried to add this tag.
+But unfortunately it didn't help.
+
+Then it was time to run `gdb` in order to find out what triggers this error.
+Eventually I just played around with `gdb` but this research must be continued
+later.
