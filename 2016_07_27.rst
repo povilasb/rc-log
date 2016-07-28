@@ -1,0 +1,30 @@
+===================
+2016-07-27 - Day 66
+===================
+
+.. contents:: :local:
+
+PyQUIC
+======
+
+Today I spent considerable amount of time debugging `proto-quic` source
+code with gdb.
+Finally, I found out what caused "No recent network activity" error.
+My packet had bad hash.
+The padding bytes were not included into the hash calculation.
+
+I would expect QUIC server to return proper error message, but in this case
+it would only tell me that the message timed out.
+Although, I was not using the latest version.
+I was using 4cc12d2679be1baceb162a7fde89b7183901fe84 (2016-07-12) version.
+
+Machine Learning
+================
+
+In the evening I continued working on my small machine learning problem:
+train model with labeled x;y coordinates and then classify new given
+coordinates.
+
+So today I built a scikit-learn docker image
+https://hub.docker.com/r/povilasb/scikit-learn/.
+I also split the code to visualization and classification modules.
