@@ -1,0 +1,50 @@
+===================
+2016-07-29 - Day 68
+===================
+
+.. contents:: :local:
+
+PyQUIC
+======
+
+Today I fixed the tags container to sort tags in asceding order.
+Then I ran into another problem: the demo server responded me with
+"Missing kFIXD" error. Which meant that I need to send "FIXD" tag.
+Which is not documented anywhere.
+Then I greped this value in `proto-quic` repo and pretty quick found out
+that this check is inside `net/quic/quic_crypto_server_stream.cc`.
+Some comments in were telling me that this tag is already deprecated.
+Then I tried to query the google production server and did not retrieve
+this specific error.
+So I decided to update `quic-proto` repo to the latest version.
+But unfortunately I would still get the same error message.
+
+GUI apps in Docker
+==================
+
+Recently one of my friends told me that it's possible to
+`run GUI applications in Docker
+<http://fabiorehm.com/blog/2014/09/11/running-gui-apps-with-docker/>`_.
+So I decided to give it a try.
+
+When I was solving `my little machine learning problem
+<https://github.com/povilasb/rc-log/blob/master/2016_07_27.rst#machine-learning>`_,
+I used Docker for all the computations.
+But when I had sample data I wanted to plot, I used my host system.
+I wish I could have used Docker because it's a bit pain to install matplotlib
+and it's dependencies.
+
+Anyways, it turns out that actually it's very easy to run gui apps in Docker.
+Linux graphics (X) server accepts it's commands over the network.
+All I had to do is bind host operating system X server Unix socket
+(`/tmp/.X11-unix/X0`) to the one inside Docker container::
+
+	$ docker run -v /tmp/.X11-unix/X0:/tmp/.X11-unix/X0 test-gui xeyes
+
+Dockerfile content::
+
+	FROM debian:jessie
+	RUN apt-get update
+	RUN apt-get install -qqy x11-apps
+	ENV DISPLAY :0
+	CMD xeyes
