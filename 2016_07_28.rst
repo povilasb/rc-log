@@ -1,0 +1,18 @@
+===================
+2016-07-28 - Day 67
+===================
+
+.. contents:: :local:
+
+PyQUIC
+======
+
+Today I ran into another problem.
+I would receive "tags out of order" error message.
+After doing to testing it was clear that the tag order was not correct.
+Then I reread the crypto document. And then it was clear that tags (SNI, VER,
+etc.) are converted to 32 bit integers and ordered in ascending order
+before serializing.
+
+So I started working on tags container class that is a dictionary that
+implements these requirements.
