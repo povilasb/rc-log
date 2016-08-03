@@ -1,0 +1,12 @@
+===================
+2016-08-01 - Day 71
+===================
+
+.. contents:: :local:
+
+Today I reviewed Amulya's code.
+She implemented `bash brace expansion <http://tldp.org/LDP/Bash-Beginners-Guide/html/sect_03_04.html>`_.
+I was trying to solve this problem recursively because I thought the code
+would be wayt shorter.
+But I did not come up with the working implementation and I proceeded with
+QUIC CHLO package research.
