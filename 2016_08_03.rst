@@ -1,0 +1,45 @@
+===================
+2016-08-03 - Day 73
+===================
+
+.. contents:: :local:
+
+Today I spent my whole day tracking were the package I sent to Lithuania
+got lost.
+
+It all started with the tracking log on usps.com::
+
+    DATE & TIME                STATUS OF ITEM             LOCATION
+    August 3, 2016 , 7:48 pm   Departed                   Vilnius, LITHUANIA
+    August 3, 2016 , 4:42 pm   Departed                   Warsaw, POLAND
+    August 3, 2016 , 2:02 pm   Departed                   Vilnius, LITHUANIA
+    August 3, 2016 , 10:52 am  Departed                   Warsaw, POLAND
+    July 31, 2016 , 7:35 pm    Departed                   Vilnius, LITHUANIA
+    July 31, 2016 , 4:12 pm    Departed                   Warsaw, POLAND
+    July 31, 2016 , 2:45 am    Departed                   Vilnius, LITHUANIA
+    July 30, 2016 , 10:35 pm   Departed                   Warsaw, POLAND
+    July 29, 2016 , 10:30 pm   Departed                   New York, UNITED STATES
+    July 29, 2016 , 7:44 pm    Arrived                    New York, UNITED STATES
+    July 29, 2016 , 11:20 am   Processed Through Facility ISC NEW YORK NY(USPS)
+    July 29, 2016 , 11:19 am   Arrived at Facility        ISC NEW YORK NY(USPS)
+    July 28, 2016 , 11:11 pm   Departed USPS Facility     JAMAICA, NY 11430
+    July 28, 2016 , 11:11 pm   Arrived at USPS Facility   JAMAICA, NY 11430
+    July 28, 2016 , 2:21 pm    Arrived at USPS Facility   BROOKLYN, NY 11256
+    July 28, 2016 , 9:41 am    Acceptance                 BROOKLYN, NY 11226
+
+I was suprised to see the package bouncind aroung Poland and Lithuania.
+So I started questioning USPS what is going on.
+
+I wrote an email to USPS, did not receive an anwser shortly.
+So I went to local post office just to get the answer "we don't know".
+They advised me to contact Lithuanian post office.
+So I did and I received the very same answer "we don't know, haven't received the item".
+Eventually I wrote emails to everyone: Lithuanian customs, post office,
+USPS and Polish post office.
+
+Eventually, I received an email from USPS telling me that their system shows
+new package status "delivered to Postal Agent on 08/03/2016 in Vilnius, Lithuania".
+Although I could not see that on
+`public USPS tracking system <https://tools.usps.com/go/TrackConfirmAction.action?tRef=fullpage&tLc=1&tLabels=EZ038287878US>`_.
+
+So I'm waiting till next day to see if they actually found the package or not.
