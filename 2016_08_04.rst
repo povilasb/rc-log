@@ -1,0 +1,26 @@
+===================
+2016-08-04 - Day 74
+===================
+
+.. contents:: :local:
+
+PyQUIC
+======
+
+Today I finally hunted down and solved the "Missing kFIXD" problem.
+There were 2 problems.
+
+The first problem was missing `COPT` tag with value `FIXD`.
+Unfortunately it was not documented.
+
+Then when I added this tag it still would not work.
+After debugging session I found out that although the tags were serialized
+in a correct order, the tag values were out of order.
+So the `COPT` tag had a wrong value.
+Eventually, I fixed the `tags.Container.values()` to return items in the
+same order as tag names.
+
+Then I received another error message "Unable to read frame data".
+After some debugging I found out the the `CHLO` message body must be minimum
+1024 bytes length.
+Which I think is also undocumented.
