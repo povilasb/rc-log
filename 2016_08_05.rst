@@ -1,0 +1,24 @@
+===================
+2016-08-05 - Day 75
+===================
+
+.. contents:: :local:
+
+Soundex algorithm
+=================
+
+Me and Charlie paired up to implement `the Soundex algorithm
+<https://en.wikipedia.org/wiki/Soundex>`_.
+
+We chose to do two implementations: one in java and another one in python.
+
+Today we only implemented it in java.
+The algorithm is easy.
+But we both agreed that we should invest more time in researching
+java 8 streams :)
+
+Machine learning
+================
+
+Todat I also fixed some grammar and language mistakes in
+http://povilasb.com/misc/machine_learning_intro.html.

@@ -1,0 +1,12 @@
+===================
+2016-08-06 - Day 76
+===================
+
+.. contents:: :local:
+
+QR Codes
+========
+
+Today I played with QR code generation.
+I used google maps API to get latitude and longitude for the specified
+address and then to encode them to QR code.
