@@ -1,0 +1,30 @@
+===================
+2016-08-08 - Day 78
+===================
+
+.. contents:: :local:
+
+Machine learning
+================
+
+Today I started my machine learning studies week.
+I started with face recognition. I
+want to build a sample application to recognize myself from the picture.
+
+I knew Antony solved this problem earlier.
+So I investigated his implementation and successfully ran the demo from
+https://github.com/antonyross/eigenfaces.
+
+Then I read about how that actually works - eigenfaces method.
+It builds vectors for every face image, calculates the mean image,
+uses PCA to reduce the vector size.
+Then to detect a given face image, it calculates euclidien distance for every
+trained image. The face that has the closest distance is the answer.
+
+Android app
+===========
+
+In the evening I tried to build hello world android application with Kotlin.
+I figured that was too much hassle. So I attempted to build one with java.
+But I still failed. There was something wrong with android SDK version
+compatibility.
