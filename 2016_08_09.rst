@@ -1,0 +1,23 @@
+===================
+2016-08-09 - Day 79
+===================
+
+.. contents:: :local:
+
+Machine learning
+================
+
+Today I took several images of myself.
+I processed them to work with eigenfaces algorithm: cut the face,
+made them grayscale and scaled to 100 by 100.
+
+Then I tested if the algorithm can recognize me in new photos.
+And it did :)
+
+Misc
+====
+
+I also helped Amulya with Linux installation.
+She was setuping her developing environment on Ubuntu.
+She installed various machine learning frameworks, libraries and tools.
+We created an `install.sh` script to automate every step.
